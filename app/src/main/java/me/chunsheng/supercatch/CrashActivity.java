@@ -69,7 +69,7 @@ public class CrashActivity extends AppCompatActivity {
                 .setWrapLine(true)
                 .setFontSize(14)
                 .setZoomEnabled(false)
-                .setShowLineNumber(true)
+                .setShowLineNumber(false)
                 .setStartLineNumber(9000)
                 .apply();
         builder.setTitle("Crash日志").
