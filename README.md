@@ -14,24 +14,21 @@ compile 'me.chunsheng:smilecatch:0.0.1'
 
 ```Java
 
-//初始化，crashListener 可选，crashSave 可选。
+//Application 初始化，crashListener 可选，crashSave 可选。
 
 CrashHandler.getInstance(this).crashListener(this).crashSave(true);
-
 ```
 
 ```Java
 
 //监听Crash
-implements CrashListener
+Application implements CrashListener{
 
-@override
-onCrashListener(){
-
-//处理Crash逻辑
+    @override
+    onCrashListener(){
+        //处理Crash逻辑
+    }
 }
-
-
 ```
 
 ```Java
@@ -45,10 +42,10 @@ import me.chunsheng.smilecatch.CrashHandler;
 import me.chunsheng.smilecatch.CrashListener;
 
 /**
- * Copyright © 2017 edaixi. All Rights Reserved.
+ * Copyright © 2017 chunsheng. All Rights Reserved.
  * Author: wei_spring
  * Date: 2017/12/19
- * Email:weichsh@edaixi.com
+ * Email:weichunsheng3611@gmail.com
  * Function: 自定义Application
  */
 public class SuperCatchApplication extends Application implements CrashListener {
@@ -122,19 +119,19 @@ public class SuperCatchApplication extends Application implements CrashListener 
 
 点击Crash button，测试Crash
 
-![Sample 首页](./screenshot/screenshot-home.jpg )
+<img src="./screenshot/screenshot-home.jpg" alt="Sample 首页" width="360" height="640">
 
 Crash页面
 
-![Crash 首页](./screenshot/screenshot-crash.jpg )
+<img src="./screenshot/screenshot-crash.jpg" alt="Crash页面" width="360" height="640">
+
 
 可以上报Crash，或者重启APP。
 如果点击上报Crash，可以预览Crash日志，然后上报，如图
 
-![Sample 首页](./screenshot/screenshot-upload.jpg )
+<img src="./screenshot/screenshot-upload.jpg" alt="Crash上报" width="360" height="640">
 
 注意：如果是7.0+版本，日志的存储读取，需要获取读取权限，需要动态获取权限，
 如果获取权限失败，需要提示用户手动去设置页面打开存储权限。
 
-![Sample 首页](./screenshot/screenshot-setting.jpg )
-
+<img src="./screenshot/screenshot-setting.jpg" alt="手机设置页面" width="360" height="640">
